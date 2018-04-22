@@ -28,13 +28,21 @@ char FindWord(){
     cout<<endl;
 }
 
-int kata(){
-    int a;
+int word(){
+    int jumlah;
     cout<<"Berapa kata yang ingin di cari? = ";
-    cin>>a;
+    cin>>jumlah;
+    int len[jumlah];
+    char kata[jumlah][15];
+    cin.ignore();
+    for(int i=0;i<jumlah;i++){
+        cout<<i+1<<". ";
+        cin.getline(kata[i],15);
+        len[i]=strlen(kata[i]);
+    }
 }
 
 int main (){
     FindWord();
-    cout<<kata();
+    cout<<word();
 }
