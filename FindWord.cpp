@@ -126,7 +126,7 @@ int word(){
         for(int d=14;d>=0;d--){
             for(int m=0;m<=(15-len1);m++){
                 diag=-1;
-                for(int n=m;n<=m+(len1-1);l++){
+                for(int n=m;n<=m+(len1-1);n++){
                     ++diag;
                     if(*(*(A+n)+d-diag)==kata[i][x])
                         ada[x]=1;
