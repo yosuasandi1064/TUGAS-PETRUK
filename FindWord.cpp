@@ -38,6 +38,9 @@ int word(){
     cout<<"Berapa kata yang ingin di cari? = ";
     cin>>jumlah;
     int len[jumlah];
+    int diag;
+    int hasil[jumlah];
+    int found[jumlah];
     char kata[jumlah][15];
     cin.ignore();
     for(int p=0;p<jumlah;p++){
