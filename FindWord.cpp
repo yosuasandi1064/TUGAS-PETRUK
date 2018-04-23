@@ -1,8 +1,10 @@
+/*1717051064 - Yosua Sandi Susanto
+1717051062 - M. Rama Wicaksono
+1757051010 - Lofanny Wahyu Dandi */
 #include <iostream>
 #include <cstring>
 using namespace std;
 
-char FindWord(){
     char b1[]={'t','g','b','w','w','i','n','t','e','r','w','s','e','s','n'};
     char b2[]={'a','a','u','n','t','t','m','m','h','f','o','o','d','n','b'};
     char b3[]={'j','l','w','c','q','l','d','z','m','p','m','v','d','m','r'};
@@ -20,6 +22,8 @@ char FindWord(){
     char b15[]={'o','h','n','k','z','w','a','t','e','r','j','g','t','r','a'};
     char *A[]={b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12,b13,b14,b15};
 
+//fungsi untuk memanggil puzzle
+char FindWord(){
     for(int b=0;b<15;b++){
         for(int k=0;k<15;k++)
             cout<<*(*(A+b)+k)<<"  ";
