@@ -82,7 +82,7 @@ int word(){
                     x++;
                 }
                 for(int j=0;j<len1;j++){
-                    if(ada[j]=1){
+                    if(ada[j]==1){
                         jadi=1;
                         hasil[i]+=jadi;
                     }
@@ -107,7 +107,7 @@ int word(){
                     x++;
                 }
                 for(int j=0;j<len1;j++){
-                    if(ada[j]=1){
+                    if(ada[j]==1){
                         jadi=1;
                         hasil[i]+=jadi;
                     }
@@ -132,7 +132,7 @@ int word(){
                     x++;
                 }
                 for(int j=0;j<len1;j++){
-                    if(ada[j]=1){
+                    if(ada[j]==1){
                         jadi=1;
                         hasil[i]+=jadi;
                     }
