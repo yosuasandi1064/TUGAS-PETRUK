@@ -40,10 +40,9 @@ int word(){
     int len[jumlah];
     char kata[jumlah][15];
     cin.ignore();
-    for(int i=0;i<jumlah;i++){
-        cout<<i+1<<". ";
-        cin.getline(kata[i],15);
-        len[i]=strlen(kata[i]);
+    for(int p=0;p<jumlah;p++){
+        cin.getline(kata[p],15);
+        len[p]=strlen(kata[p]);
     }
     for(int i=0;i<jumlah;i++){
         hasil[i]=0;
@@ -97,11 +96,11 @@ int word(){
             }
         }
         for(int c=0;c<15;c++){
-            for(int l=0;l<=(15-len1);l++){
+            for(int m=0;m<=(15-len1);m++){
                 diag=-1;
-                for(int w=l;w<l+(len1-1);w++){
+                for(int n=m;n<m+(len1-1);n++){
                     ++diag;
-                    if(*(*(A+w)+c+diag)==kata[i][x])
+                    if(*(*(A+n)+c+diag)==kata[i][x])
                         ada[x]=1;
                     else
                         ada[x]=0;
@@ -122,11 +121,11 @@ int word(){
             }
         }
         for(int d=14;d>=0;d--){
-            for(int l=0;l<=(15-len1);l++){
+            for(int m=0;m<=(15-len1);m++){
                 diag=-1;
-                for(int w=l;w<=l+(len1-1);l++){
+                for(int n=m;n<=m+(len1-1);l++){
                     ++diag;
-                    if(*(*(A+w)+d-diag)==kata[i][x])
+                    if(*(*(A+n)+d-diag)==kata[i][x])
                         ada[x]=1;
                     else
                         ada[x]=0;
@@ -161,4 +160,6 @@ int word(){
 int main (){
     FindWord();
     word();
+    
+    return 0;
 }
