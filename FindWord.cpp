@@ -45,6 +45,34 @@ int word(){
         cin.getline(kata[i],15);
         len[i]=strlen(kata[i]);
     }
+    for(int i=0;i<jumlah;i++){
+        hasil[i]=0;
+        int len1=len[i],x=0;
+        bool ada[len1], jadi;
+
+        for(int a=0;a<15;a++){
+            for(int l=0;l<=(15-len1);l++){
+                for (int w=l;w<=l+(len1-1);w++){
+                    if(*(*(A+a)+w)==kata[i][x])
+                        ada[x]=1;
+                    else
+                        ada[x]=0;
+                    x++;
+                }
+                for(int j=0;j<len1;j++){
+                    if(ada[j]==1){
+                        jadi=1;
+                        hasil[i]+=jadi;
+                    }
+                    else jadi=0;
+                    if(hasil[i]==len1){
+                        found[i]=1;
+                    }
+                }
+                hasil[i]=0;
+                x=0;
+            }
+        }
 }
 
 int main (){
