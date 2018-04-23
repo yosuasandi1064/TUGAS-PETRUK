@@ -96,6 +96,58 @@ int word(){
                 x=0;
             }
         }
+        for(int c=0;c<15;c++){
+            for(int l=0;l<=(15-len1);l++){
+                diag=-1;
+                for(int w=l;w<l+(len1-1);w++){
+                    ++diag;
+                    if(*(*(A+w)+c+diag)==kata[i][x])
+                        ada[x]=1;
+                    else
+                        ada[x]=0;
+                    x++;
+                }
+                for(int j=0;j<len1;j++){
+                    if(ada[j]=1){
+                        jadi=1;
+                        hasil[i]+=jadi;
+                    }
+                    else jadi=0;
+                    if(hasil[i]==len1){
+                        found[i]=1;
+                    }
+                }
+                hasil[i]=0;
+                x=0;
+            }
+        }
+        for(int d=14;d>=0;d--){
+            for(int l=0;l<=(15-len1);l++){
+                diag=-1;
+                for(int w=l;w<=l+(len1-1);l++){
+                    ++diag;
+                    if(*(*(A+w)+d-diag)==kata[i][x])
+                        ada[x]=1;
+                    else
+                        ada[x]=0;
+                    x++;
+                }
+                for(int j=0;j<len1;j++){
+                    if(ada[j]=1){
+                        jadi=1;
+                        hasil[i]+=jadi;
+                    }
+                    else jadi=0;
+                    if(hasil[i]==len1){
+                        found[i]=1;
+                    }
+                }
+                hasil[i]=0;
+                x=0;
+            }
+        }
+        x=0;
+    }
 }
 
 int main (){
